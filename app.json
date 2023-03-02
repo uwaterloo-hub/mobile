@@ -24,6 +24,9 @@
       },
       "package": "com.uwhub.mobile"
     },
+    "androidStatusBar": {
+      "barStyle": "light-content"
+    },
     "web": {
       "favicon": "./assets/logos/favicon.png"
     },
