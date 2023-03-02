@@ -1,18 +1,29 @@
-import { StyleSheet, Text, View } from "react-native";
+import React from "react";
+import { MD3DarkTheme, Provider as PaperProvider } from "react-native-paper";
+import { DarkTheme, NavigationContainer } from "@react-navigation/native";
+
+import MoreNavigator from "./src/navigators/MoreNavigator";
+
 
 export default function App() {
-    return (
-        <View style={styles.container}>
-            <Text>Open up App.js to start working on your app!</Text>
-        </View>
-    );
-}
 
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: "#fff",
-        alignItems: "center",
-        justifyContent: "center",
-    },
-});
+    const CombinedTheme = {
+        ...DarkTheme,
+        ...MD3DarkTheme,
+        colors: {
+            ...DarkTheme.colors,
+            ...MD3DarkTheme.colors
+        }
+    }
+
+    return (
+
+        <PaperProvider theme={MD3DarkTheme}>
+            <NavigationContainer theme={CombinedTheme}>
+                <MoreNavigator />
+            </NavigationContainer>
+        </PaperProvider>
+
+    );
+
+}
