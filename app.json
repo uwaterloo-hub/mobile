@@ -25,7 +25,9 @@
       "package": "com.uwhub.mobile"
     },
     "androidStatusBar": {
-      "barStyle": "light-content"
+      "barStyle": "light-content",
+      "translucent": true,
+      "backgroundColor": "#00000000"
     },
     "web": {
       "favicon": "./assets/logos/favicon.png"
