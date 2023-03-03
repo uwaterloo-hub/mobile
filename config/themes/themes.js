@@ -1,4 +1,4 @@
 import { DefaultTheme } from "./defaultTheme";
 
 
-export { DefaultTheme };
+export default { DefaultTheme };
