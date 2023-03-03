@@ -1,18 +1,50 @@
-import React from "react";
-import { View } from "react-native";
-import { Button } from "react-native-paper";
-import { Text } from "react-native-paper";
+import React, { useContext } from "react";
+import { Image, StyleSheet, View } from "react-native";
+
+import Divider from "../components/Divider";
+import Screen from "../components/Screen";
+import ListMenuButton from "../components/ListMenu/ListMenuButton";
+import { Settings } from "../settings";
 
 
-export default function MoreScreen({ navigation }) {
+export default function MoreScreen() {
+
+    const settings = useContext(Settings);
 
     return (
+        <Screen>
+            <View style={styles.logoContainer}>
+                <Image source={require("../../assets/logos/base-white.png")} style={styles.logo} />
+            </View>
 
-        <View style={{ alignItems: "center", flex: 1, justifyContent: "center" }}>
-            <Text>More screen</Text>
-            <Button mode="contained" onPress={() => navigation.navigate("Settings")} >Settings</Button>
-        </View>
+            <Divider />
 
+            <ListMenuButton title="GRT schedule" icon="bus" />
+            <ListMenuButton title="Open recreation schedule" icon="run" />
+
+            <Divider />
+
+            <ListMenuButton title="Categories" icon="label-outline" />
+            <ListMenuButton title="Settings" icon="cog-outline"
+                            onPress={() => settings.navigator.navigate("Settings")} />
+            <ListMenuButton title="About" icon="information-outline" />
+
+        </Screen>
     );
 
 }
+
+
+const styles = StyleSheet.create({
+
+    logo: {
+        width: 100,
+        height: 100,
+    },
+    logoContainer: {
+        alignItems: "center",
+        marginVertical: 50,
+    }
+
+})
+
