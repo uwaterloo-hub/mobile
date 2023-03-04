@@ -31,7 +31,6 @@ const titleMap = {
     More: "More",
     Recreation: "Open recreation schedule",
     Rooms: "Open classrooms",
-    Settings: "Settings",
     Weather: "Weather (Waterloo)"
 };
 
