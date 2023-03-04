@@ -2,10 +2,10 @@ import React, { useContext } from "react";
 import { Image, StyleSheet, View } from "react-native";
 
 import Divider from "../components/Divider";
-import Screen from "../components/Screen";
 import ListMenuButton from "../components/ListMenu/ListMenuButton";
+import Screen from "../components/Screen";
 import { Config } from "../config";
-import { iconMap, titleMap } from "../screenMaps";
+import { iconMap, titleMap } from "./details/detailMaps";
 
 
 export default function MoreScreen() {

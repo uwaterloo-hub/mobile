@@ -2,9 +2,10 @@ import React, { useContext, useEffect } from "react";
 import { Pressable } from "react-native";
 import { BottomNavigation } from "react-native-paper";
 
-import MoreScreen from "../screens/MoreScreen";
 import { Config } from "../config";
-import { componentMap, iconMap } from "../screenMaps";
+import { components } from "../screens/details/components";
+import { iconMap } from "../screens/details/detailMaps";
+import MoreScreen from "../screens/MoreScreen";
 
 
 export default function HomeNavigator({ navigation }) {
@@ -21,8 +22,8 @@ export default function HomeNavigator({ navigation }) {
         <BottomNavigation
             navigationState={{ index, routes }}
             onIndexChange={setIndex}
-            renderScene={BottomNavigation.SceneMap({ More: MoreScreen, ...componentMap })}
-            renderTouchable={(touchableProps) => <Pressable {...touchableProps}/>}
+            renderScene={BottomNavigation.SceneMap({ More: MoreScreen, ...components })}
+            renderTouchable={(touchableProps) => <Pressable {...touchableProps} />}
             sceneAnimationEnabled={true}
         />
     );

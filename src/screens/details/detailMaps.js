@@ -1,20 +1,3 @@
-import GRTScreen from "./screens/GRTScreen";
-import MapsScreen from "./screens/MapsScreen";
-import RecreationScreen from "./screens/RecreationScreen";
-import RoomsScreen from "./screens/RoomsScreen";
-import ClassesScreen from "./screens/ClassesScreen";
-import WeatherScreen from "./screens/WeatherScreen";
-
-
-// No MoreScreen because of require loop
-const componentMap = {
-    Classes: ClassesScreen,
-    GRT: GRTScreen,
-    Maps: MapsScreen,
-    Recreation: RecreationScreen,
-    Rooms: RoomsScreen,
-    Weather: WeatherScreen
-};
 const iconMap = {
     Categories: { focused: "label", unfocused: "label-outline" },
     Classes: { focused: "calendar", unfocused: "calendar-outline" },
@@ -39,4 +22,4 @@ const titleMap = {
 };
 
 
-export { componentMap, iconMap, titleMap };
+export { iconMap, titleMap };

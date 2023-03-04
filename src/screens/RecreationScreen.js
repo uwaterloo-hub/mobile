@@ -3,7 +3,7 @@ import { View } from "react-native";
 import { Text } from "react-native-paper";
 
 import Screen from "../components/Screen";
-import { titleMap } from "../screenMaps";
+import { titleMap } from "./details/detailMaps";
 
 
 export default function RecreationScreen({ navigation }) {
