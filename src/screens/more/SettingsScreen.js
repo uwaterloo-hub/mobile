@@ -1,7 +1,8 @@
 import React from "react";
 import { View } from "react-native";
 import { Text } from "react-native-paper";
-import Screen from "../components/Screen";
+
+import Screen from "../../components/Screen";
 
 
 export default function SettingsScreen({ navigation }) {

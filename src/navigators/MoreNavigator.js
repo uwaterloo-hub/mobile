@@ -3,7 +3,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 
 import { Config } from "../config";
 import { componentMap } from "../screenMaps";
-import SettingsScreen from "../screens/SettingsScreen";
+import SettingsScreen from "../screens/more/SettingsScreen";
 import { FadeFromRight } from "./FadeFromRight";
 import HomeNavigator from "./HomeNavigator";
 

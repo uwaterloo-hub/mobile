@@ -17,11 +17,13 @@ export default function MoreScreen() {
             <View style={styles.logoContainer}>
                 <Image source={require("../../assets/logos/base-white.png")} style={styles.logo} />
             </View>
+
             <Divider />
             {config.pageOrder.slice(5).map(key => (
                 <ListMenuButton title={titleMap[key]} icon={iconMap[key].focused} key={key}
                                 onPress={() => config.navigation.navigate(key)} />
             ))}
+
             <Divider />
             <ListMenuButton title="Categories" icon="label-outline" />
             <ListMenuButton title="Settings" icon="cog-outline"
