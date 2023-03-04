@@ -1,19 +1,19 @@
 import React, { useContext } from "react";
 import { View, StyleSheet } from "react-native";
 import { Avatar, Text, TouchableRipple } from "react-native-paper";
-import { Settings } from "../../settings";
+import { Config } from "../../config";
 
 
 export default function ListMenuButton({ title, subtitle, icon, onPress }) {
 
-    const settings = useContext(Settings);
+    const config = useContext(Config);
     const subtitleComponent = subtitle &&
-        <Text style={[styles.subtitle, { color: settings.theme.onSurfaceVariant }]}>{subtitle}</Text>;
+        <Text style={[styles.subtitle, { color: config.theme.onSurfaceVariant }]}>{subtitle}</Text>;
 
     return (
         <TouchableRipple onPress={onPress} rippleColor="#ffffff40">
             <View style={styles.item}>
-                <Avatar.Icon size={40} icon={icon} color={settings.theme.primary} style={styles.icon} />
+                <Avatar.Icon size={40} icon={icon} color={config.theme.primary} style={styles.icon} />
                 <View style={[styles.textContainer, { marginVertical: subtitle ? 8 : 0 }]}>
                     <Text style={styles.title}>{title}</Text>
                     {subtitleComponent}

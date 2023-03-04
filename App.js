@@ -5,26 +5,29 @@ import { NavigationContainer } from "@react-navigation/native";
 import themes from "./config/themes/themes";
 import { toNavigationTheme } from "./config/utils";
 import MoreNavigator from "./src/navigators/MoreNavigator";
-import { Settings } from "./src/settings";
+import { Config } from "./src/config";
 
 
 export default function App() {
 
     const [lang, setLang] = useState("en");
-    const [navigator, setNavigator] = useState({});
+    const [navigation, setNavigation] = useState({});
+    const [pageOrder, setPageOrder] = useState(
+        ["Weather", "Maps", "Schedule", "Rooms", "More", "GRT", "Recreation"]);
     const [theme, setTheme] = useState(themes.DefaultTheme);
     const [timeFormat, setTimeFormat] = useState("");
 
     return (
-        <Settings.Provider value={{
-            lang, setLang, navigator, setNavigator, theme, setTheme, timeFormat, setTimeFormat
+        <Config.Provider value={{
+            lang, setLang, navigation, setNavigation, pageOrder, setPageOrder, theme, setTheme,
+            timeFormat, setTimeFormat
         }}>
             <PaperProvider theme={{ ...MD3DarkTheme, colors: theme }}>
                 <NavigationContainer theme={toNavigationTheme(theme)}>
                     <MoreNavigator />
                 </NavigationContainer>
             </PaperProvider>
-        </Settings.Provider>
+        </Config.Provider>
     );
 
 }
