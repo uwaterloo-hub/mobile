@@ -15,5 +15,4 @@ export default function ClassesScreen({ navigation }) {
         </Screen>
     );
 
-
 }

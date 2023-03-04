@@ -15,5 +15,4 @@ export default function SettingsScreen({ navigation }) {
         </Screen>
     );
 
-
 }
