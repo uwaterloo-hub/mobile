@@ -26,7 +26,7 @@ const iconMap = {
 };
 const titleMap = {
     GRT: "GRT schedule",
-    Maps: "UWaterloo map",
+    Maps: "Maps",
     More: "More",
     Recreation: "Open recreation schedule",
     Rooms: "Open classrooms",

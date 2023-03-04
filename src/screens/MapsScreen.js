@@ -7,7 +7,7 @@ import Screen from "../components/Screen";
 export default function MapsScreen({ navigation }) {
 
     return (
-        <Screen navigation={navigation} title="UWaterloo map">
+        <Screen navigation={navigation} title="Maps">
             <View style={{ alignItems: "center", flex: 1, justifyContent: "center" }}>
                 <Text>Maps screen</Text>
             </View>
