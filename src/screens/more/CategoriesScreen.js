@@ -1,14 +1,15 @@
 import React from "react";
 import { View } from "react-native";
+import { Text } from "react-native-paper";
 
 import Screen from "../../components/Screen";
-import { Text } from "react-native-paper";
+import { titleMap } from "../../screenMaps";
 
 
 export default function CategoriesScreen({ navigation }) {
 
     return (
-        <Screen navigation={navigation} title="Categories">
+        <Screen navigation={navigation} title={titleMap.Categories}>
             <View style={{ alignItems: "center", flex: 1, justifyContent: "center" }}>
                 <Text>Categories screen</Text>
             </View>

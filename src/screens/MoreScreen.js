@@ -11,6 +11,7 @@ import { iconMap, titleMap } from "../screenMaps";
 export default function MoreScreen() {
 
     const config = useContext(Config);
+    const otherScreens = ["Categories", "Settings"]
 
     return (
         <Screen>
@@ -25,11 +26,10 @@ export default function MoreScreen() {
             ))}
 
             <Divider />
-            <ListMenuButton title="Categories" icon="label-outline"
-                            onPress={() => config.navigation.navigate("Categories")} />
-            <ListMenuButton title="Settings" icon="cog-outline"
-                            onPress={() => config.navigation.navigate("Settings")} />
-            <ListMenuButton title="About" icon="information-outline" />
+            {otherScreens.map(key => (
+                <ListMenuButton title={key} icon={iconMap[key].unfocused} key={key}
+                                onPress={() => config.navigation.navigate(key)} />
+            ))}
         </Screen>
     );
 
