@@ -1,8 +1,8 @@
-import { Animated, Easing, Platform } from "react-native";
 import {
     ScaleFromCenterAndroid,
     SlideFromRightIOS
 } from "@react-navigation/stack/src/TransitionConfigs/TransitionPresets";
+import { Animated, Easing, Platform } from "react-native";
 
 
 function conditional(condition, main, fallback) {
@@ -19,6 +19,7 @@ function conditional(condition, main, fallback) {
     );
 
 }
+
 function forFadeFromRightAndroid({ current, inverted, layouts: { screen }, closing }) {
 
     const translateX = Animated.multiply(

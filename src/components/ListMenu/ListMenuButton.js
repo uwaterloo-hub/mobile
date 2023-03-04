@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
-import { View, StyleSheet } from "react-native";
+import { StyleSheet, View } from "react-native";
 import { Avatar, Text, TouchableRipple } from "react-native-paper";
+
 import { Config } from "../../config";
 
 

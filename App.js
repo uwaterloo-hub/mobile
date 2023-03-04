@@ -1,11 +1,11 @@
+import { NavigationContainer } from "@react-navigation/native";
 import React, { useState } from "react";
 import { MD3DarkTheme, Provider as PaperProvider } from "react-native-paper";
-import { NavigationContainer } from "@react-navigation/native";
 
 import themes from "./config/themes/themes";
 import { toNavigationTheme } from "./config/utils";
-import MoreNavigator from "./src/navigators/MoreNavigator";
 import { Config } from "./src/config";
+import MoreNavigator from "./src/navigators/MoreNavigator";
 
 
 export default function App() {
