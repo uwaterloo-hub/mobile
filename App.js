@@ -13,7 +13,7 @@ export default function App() {
     const [lang, setLang] = useState("en");
     const [navigation, setNavigation] = useState({});
     const [pageOrder, setPageOrder] = useState(
-        ["Weather", "Maps", "Schedule", "Rooms", "More", "GRT", "Recreation"]);
+        ["Weather", "Maps", "Classes", "Rooms", "More", "GRT", "Recreation"]);
     const [theme, setTheme] = useState(themes.DefaultTheme);
     const [timeFormat, setTimeFormat] = useState("");
 
