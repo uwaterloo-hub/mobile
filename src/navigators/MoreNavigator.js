@@ -3,6 +3,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 
 import { Config } from "../config";
 import { componentMap } from "../screenMaps";
+import CategoriesScreen from "../screens/more/CategoriesScreen";
 import SettingsScreen from "../screens/more/SettingsScreen";
 import { FadeFromRight } from "./FadeFromRight";
 import HomeNavigator from "./HomeNavigator";
@@ -21,6 +22,7 @@ export default function MoreNavigator() {
             {config.pageOrder.slice(5).map(key => (
                 <Stack.Screen name={key} component={componentMap[key]} key={key} />
             ))}
+            <Stack.Screen name="Categories" component={CategoriesScreen} />
             <Stack.Screen name="Settings" component={SettingsScreen} />
         </Stack.Navigator>
 

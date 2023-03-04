@@ -25,7 +25,8 @@ export default function MoreScreen() {
             ))}
 
             <Divider />
-            <ListMenuButton title="Categories" icon="label-outline" />
+            <ListMenuButton title="Categories" icon="label-outline"
+                            onPress={() => config.navigation.navigate("Categories")} />
             <ListMenuButton title="Settings" icon="cog-outline"
                             onPress={() => config.navigation.navigate("Settings")} />
             <ListMenuButton title="About" icon="information-outline" />
