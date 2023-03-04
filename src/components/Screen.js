@@ -4,7 +4,7 @@ import { Appbar } from "react-native-paper";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 
-export default function Screen({ actions, title, children }) {
+export default function Screen({ actions, navigation, title, children }) {
 
     if (title) {
 
@@ -14,6 +14,7 @@ export default function Screen({ actions, title, children }) {
         return (
             <View style={{ flex: 1 }}>
                 <Appbar.Header mode="small">
+                    {navigation && <Appbar.BackAction onPress={navigation.goBack} />}
                     <Appbar.Content title={title} />
                     {actionsComponent}
                 </Appbar.Header>

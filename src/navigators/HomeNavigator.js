@@ -2,41 +2,26 @@ import React, { useContext, useEffect } from "react";
 import { Pressable } from "react-native";
 import { BottomNavigation } from "react-native-paper";
 
-import MapsScreen from "../screens/MapsScreen";
 import MoreScreen from "../screens/MoreScreen";
-import RoomsScreen from "../screens/RoomsScreen";
-import ScheduleScreen from "../screens/ScheduleScreen";
-import WeatherScreen from "../screens/WeatherScreen";
-import { Settings } from "../settings";
+import { Config } from "../config";
+import { componentMap, iconMap } from "../screenMaps";
 
 
 export default function HomeNavigator({ navigation }) {
 
-    const settings = useContext(Settings);
-    useEffect(() => settings.setNavigator(navigation), []);
+    const config = useContext(Config);
+    useEffect(() => config.setNavigation(navigation), []);
 
     const [index, setIndex] = React.useState(2);
-    const [routes] = React.useState([
-        { key: "weather", title: "Weather", focusedIcon: "cloud", unfocusedIcon: "cloud-outline"},
-        { key: "maps", title: "Maps", focusedIcon: "compass", unfocusedIcon: "compass-outline" },
-        { key: "schedule", title: "Schedule", focusedIcon: "calendar", unfocusedIcon: "calendar-outline" },
-        { key: "rooms", title: "Rooms", focusedIcon: "map-marker", unfocusedIcon: "map-marker-outline" },
-        { key: "more", title: "More", focusedIcon: "dots-horizontal", unfocusedIcon: "dots-horizontal" }
-    ]);
-
-    const renderScene = BottomNavigation.SceneMap({
-        weather: WeatherScreen,
-        maps: MapsScreen,
-        schedule: ScheduleScreen,
-        rooms: RoomsScreen,
-        more: MoreScreen
-    });
+    const [routes] = React.useState(config.pageOrder.slice(0, 5).map(key => {
+        return { key: key, title: key, focusedIcon: iconMap[key].focused, unfocusedIcon: iconMap[key].unfocused };
+    }));
 
     return (
         <BottomNavigation
             navigationState={{ index, routes }}
             onIndexChange={setIndex}
-            renderScene={renderScene}
+            renderScene={BottomNavigation.SceneMap({ More: MoreScreen, ...componentMap })}
             renderTouchable={(touchableProps) => <Pressable {...touchableProps}/>}
             sceneAnimationEnabled={true}
         />
