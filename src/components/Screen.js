@@ -4,7 +4,7 @@ import { Appbar } from "react-native-paper";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 
-export default function Screen({ actions, navigation, style, title, children }) {
+export default function Screen({ actions, navigation, noMargin, style, title, children }) {
 
     style = style ? { flex: 1, ...style } : { flex: 1 }
 
@@ -20,7 +20,7 @@ export default function Screen({ actions, navigation, style, title, children }) 
                     <Appbar.Content title={title} />
                     {actionsComponent}
                 </Appbar.Header>
-                <View style={style}>
+                <View style={[{ marginHorizontal: noMargin ? 0 : 15 }, style]}>
                     {children}
                 </View>
             </View>
@@ -29,7 +29,7 @@ export default function Screen({ actions, navigation, style, title, children }) 
     } else {
 
         return (
-            <SafeAreaView style={styles.container}>
+            <SafeAreaView style={[{ marginHorizontal: noMargin ? 0 : 15 }, styles.container]}>
                 {children}
             </SafeAreaView>
         );

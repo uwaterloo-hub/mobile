@@ -14,7 +14,7 @@ export default function MoreScreen() {
     const otherScreens = ["Categories", "Settings"]
 
     return (
-        <Screen>
+        <Screen noMargin={true}>
             <View style={styles.logoContainer}>
                 <Image source={require("../../assets/logos/base-white.png")} style={styles.logo} />
             </View>

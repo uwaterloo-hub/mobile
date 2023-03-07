@@ -28,9 +28,7 @@ const styles = StyleSheet.create({
         alignItems: "center",
         borderRadius: 12,
         flexDirection: "row",
-        margin: 5,
         padding: 10,
-        width: "90%"
     },
     icon: {
         backgroundColor: "transparent"
