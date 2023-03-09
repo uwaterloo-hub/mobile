@@ -5,7 +5,7 @@ const iconMap = {
     Maps: { focused: "compass", unfocused: "compass-outline" },
     More: { focused: "dots-horizontal", unfocused: "dots-horizontal" },
     Recreation: { focused: "run", unfocused: "run" },
-    Rooms: { focused: "map-marker", unfocused: "map-marker-outline" },
+    Rooms: { focused: "pencil", unfocused: "pencil-outline" },
     Settings: { focused: "cog", unfocused: "cog-outline" },
     Weather: { focused: "cloud", unfocused: "cloud-outline" }
 };
