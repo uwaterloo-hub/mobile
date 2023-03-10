@@ -32,7 +32,6 @@ function MoreScreen() {
             ))}
         </Screen>
     );
-
 }
 
 const styles = StyleSheet.create({

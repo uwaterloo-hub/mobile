@@ -17,7 +17,6 @@ function conditional(condition, main, fallback) {
             fallback
         )
     );
-
 }
 
 function forFadeFromRightAndroid({ current, inverted, layouts: { screen }, closing }) {
@@ -47,7 +46,6 @@ function forFadeFromRightAndroid({ current, inverted, layouts: { screen }, closi
             transform: [{ translateX }],
         },
     };
-
 }
 
 const FadeInFromRightAndroidSpec = {

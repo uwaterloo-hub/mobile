@@ -22,7 +22,6 @@ function ListMenuButton({ title, subtitle, icon, onPress }) {
             </View>
         </TouchableRipple>
     );
-
 }
 
 const styles = StyleSheet.create({
