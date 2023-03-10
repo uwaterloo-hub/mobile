@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { Image, StyleSheet, View } from "react-native";
+import { Divider } from "react-native-paper";
 
-import Divider from "../components/Divider";
 import ListMenuButton from "../components/ListMenu/ListMenuButton";
 import Screen from "../components/Screen";
 import { Config } from "../config";
@@ -19,13 +19,13 @@ function MoreScreen() {
                 <Image source={require("../../assets/logos/base-white.png")} style={styles.logo} />
             </View>
 
-            <Divider />
+            <Divider bold={true} />
             {config.pageOrder.slice(5).map(key => (
                 <ListMenuButton title={titles[key]} icon={icons[key].focused} key={key}
                                 onPress={() => config.navigation.navigate(key)} />
             ))}
 
-            <Divider />
+            <Divider bold={true} />
             {otherScreens.map(key => (
                 <ListMenuButton title={key} icon={icons[key].unfocused} key={key}
                                 onPress={() => config.navigation.navigate(key)} />
