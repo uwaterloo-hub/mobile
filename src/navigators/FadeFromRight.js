@@ -79,4 +79,4 @@ export const FadeFromRight = Platform.select({
     ios: SlideFromRightIOS,
     android: FadeFromRightAndroid,
     default: ScaleFromCenterAndroid
-})
+});

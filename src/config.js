@@ -1,7 +1,7 @@
 import { createContext } from "react";
 
 
-export const Config = createContext({
+const Config = createContext({
 
     lang: "",
     navigation: {},
@@ -15,4 +15,7 @@ export const Config = createContext({
     setTheme: (_) => {},
     setTimeFormat: (_) => {}
 
-})
+});
+
+
+export { Config };

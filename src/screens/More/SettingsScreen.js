@@ -6,7 +6,7 @@ import Screen from "../../components/Screen";
 import { titles } from "../details/texts";
 
 
-export default function SettingsScreen({ navigation }) {
+function SettingsScreen({ navigation }) {
 
     return (
         <Screen navigation={navigation} title={titles.Settings}>
@@ -17,3 +17,6 @@ export default function SettingsScreen({ navigation }) {
     );
 
 }
+
+
+export default SettingsScreen;
