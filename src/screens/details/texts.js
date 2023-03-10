@@ -5,7 +5,7 @@ const icons = {
     Maps: { focused: "compass", unfocused: "compass-outline" },
     More: { focused: "dots-horizontal", unfocused: "dots-horizontal" },
     Recreation: { focused: "run", unfocused: "run" },
-    Rooms: { focused: "pencil", unfocused: "pencil-outline" },
+    Rooms: { focused: "book-open-page-variant", unfocused: "book-open-page-variant-outline" },
     Settings: { focused: "cog", unfocused: "cog-outline" },
     Weather: { focused: "cloud", unfocused: "cloud-outline" }
 };
