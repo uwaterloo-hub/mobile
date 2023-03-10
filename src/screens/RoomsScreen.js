@@ -3,17 +3,19 @@ import { View } from "react-native";
 import { Text } from "react-native-paper";
 
 import Screen from "../components/Screen";
-import { titleMap } from "./details/detailMaps";
+import { titles } from "./details/texts";
 
 
-export default function RoomsScreen({ navigation }) {
+function RoomsScreen({ navigation }) {
 
     return (
-        <Screen navigation={navigation} title={titleMap.Rooms}>
+        <Screen navigation={navigation} title={titles.Rooms}>
             <View style={{ alignItems: "center", flex: 1, justifyContent: "center" }}>
                 <Text>Rooms screen</Text>
             </View>
         </Screen>
     );
-
 }
+
+
+export default RoomsScreen;

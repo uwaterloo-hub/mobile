@@ -1,4 +1,4 @@
-const iconMap = {
+const icons = {
     Categories: { focused: "label", unfocused: "label-outline" },
     Classes: { focused: "calendar", unfocused: "calendar-outline" },
     GRT: { focused: "bus", unfocused: "bus" },
@@ -9,7 +9,7 @@ const iconMap = {
     Settings: { focused: "cog", unfocused: "cog-outline" },
     Weather: { focused: "cloud", unfocused: "cloud-outline" }
 };
-const titleMap = {
+const titles = {
     Categories: "Edit categories",
     Classes: "Class schedule",
     GRT: "GRT schedule",
@@ -22,4 +22,4 @@ const titleMap = {
 };
 
 
-export { iconMap, titleMap };
+export { icons, titles };

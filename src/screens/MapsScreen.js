@@ -3,17 +3,19 @@ import { View } from "react-native";
 import { Text } from "react-native-paper";
 
 import Screen from "../components/Screen";
-import { titleMap } from "./details/detailMaps";
+import { titles } from "./details/texts";
 
 
-export default function MapsScreen({ navigation }) {
+function MapsScreen({ navigation }) {
 
     return (
-        <Screen navigation={navigation} title={titleMap.Maps}>
+        <Screen navigation={navigation} title={titles.Maps}>
             <View style={{ alignItems: "center", flex: 1, justifyContent: "center" }}>
                 <Text>Maps screen</Text>
             </View>
         </Screen>
     );
-
 }
+
+
+export default MapsScreen;

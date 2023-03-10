@@ -4,18 +4,18 @@ import { BottomNavigation } from "react-native-paper";
 
 import { Config } from "../config";
 import { components } from "../screens/details/components";
-import { iconMap } from "../screens/details/detailMaps";
+import { icons } from "../screens/details/texts";
 import MoreScreen from "../screens/MoreScreen";
 
 
-export default function HomeNavigator({ navigation }) {
+function HomeNavigator({ navigation }) {
 
     const config = useContext(Config);
     useEffect(() => config.setNavigation(navigation), []);
 
     const [index, setIndex] = React.useState(2);
     const [routes] = React.useState(config.pageOrder.slice(0, 5).map(key => {
-        return { key: key, title: key, focusedIcon: iconMap[key].focused, unfocusedIcon: iconMap[key].unfocused };
+        return { key: key, title: key, focusedIcon: icons[key].focused, unfocusedIcon: icons[key].unfocused };
     }));
 
     return (
@@ -27,5 +27,7 @@ export default function HomeNavigator({ navigation }) {
             sceneAnimationEnabled={true}
         />
     );
-
 }
+
+
+export default HomeNavigator;

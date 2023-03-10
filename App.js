@@ -8,7 +8,7 @@ import { Config } from "./src/config";
 import MoreNavigator from "./src/navigators/MoreNavigator";
 
 
-export default function App() {
+function App() {
 
     const [lang, setLang] = useState("en");
     const [navigation, setNavigation] = useState({});
@@ -29,5 +29,7 @@ export default function App() {
             </PaperProvider>
         </Config.Provider>
     );
-
 }
+
+
+export default App;

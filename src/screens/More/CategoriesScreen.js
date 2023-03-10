@@ -3,7 +3,7 @@ import { StyleSheet, View } from "react-native";
 import { Avatar, Surface, Text, TouchableRipple } from "react-native-paper";
 
 import Screen from "../../components/Screen";
-import { titleMap } from "../details/detailMaps";
+import { titles } from "../details/texts";
 
 
 function IconButton({ icon, onPress }) {
@@ -18,10 +18,10 @@ function IconButton({ icon, onPress }) {
 
 }
 
-export default function CategoriesScreen({ navigation }) {
+function CategoriesScreen({ navigation }) {
 
     return (
-        <Screen navigation={navigation} title={titleMap.Categories} style={{ alignItems: "center" }}>
+        <Screen navigation={navigation} title={titles.Categories} style={{ alignItems: "center" }}>
             <Surface elevation={2} style={styles.container}>
                 <Avatar.Icon icon="cloud-outline" size={40} style={styles.icon} />
                 <Text style={styles.label}>Weather</Text>
@@ -31,9 +31,7 @@ export default function CategoriesScreen({ navigation }) {
             </Surface>
         </Screen>
     );
-
 }
-
 
 const styles = StyleSheet.create({
 
@@ -59,4 +57,7 @@ const styles = StyleSheet.create({
         marginLeft: 10
     }
 
-})
+});
+
+
+export default CategoriesScreen;

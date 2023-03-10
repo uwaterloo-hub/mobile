@@ -5,7 +5,7 @@ import { Avatar, Text, TouchableRipple } from "react-native-paper";
 import { Config } from "../../config";
 
 
-export default function ListMenuButton({ title, subtitle, icon, onPress }) {
+function ListMenuButton({ title, subtitle, icon, onPress }) {
 
     const config = useContext(Config);
     const subtitleComponent = subtitle &&
@@ -24,7 +24,6 @@ export default function ListMenuButton({ title, subtitle, icon, onPress }) {
     );
 
 }
-
 
 const styles = StyleSheet.create({
 
@@ -50,3 +49,6 @@ const styles = StyleSheet.create({
     }
 
 })
+
+
+export default ListMenuButton;

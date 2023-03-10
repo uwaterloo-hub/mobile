@@ -5,10 +5,10 @@ import Divider from "../components/Divider";
 import ListMenuButton from "../components/ListMenu/ListMenuButton";
 import Screen from "../components/Screen";
 import { Config } from "../config";
-import { iconMap, titleMap } from "./details/detailMaps";
+import { icons, titles } from "./details/texts";
 
 
-export default function MoreScreen() {
+function MoreScreen() {
 
     const config = useContext(Config);
     const otherScreens = ["Categories", "Settings"]
@@ -21,20 +21,19 @@ export default function MoreScreen() {
 
             <Divider />
             {config.pageOrder.slice(5).map(key => (
-                <ListMenuButton title={titleMap[key]} icon={iconMap[key].focused} key={key}
+                <ListMenuButton title={titles[key]} icon={icons[key].focused} key={key}
                                 onPress={() => config.navigation.navigate(key)} />
             ))}
 
             <Divider />
             {otherScreens.map(key => (
-                <ListMenuButton title={key} icon={iconMap[key].unfocused} key={key}
+                <ListMenuButton title={key} icon={icons[key].unfocused} key={key}
                                 onPress={() => config.navigation.navigate(key)} />
             ))}
         </Screen>
     );
 
 }
-
 
 const styles = StyleSheet.create({
 
@@ -47,5 +46,7 @@ const styles = StyleSheet.create({
         marginVertical: 50,
     }
 
-})
+});
 
+
+export default MoreScreen;
