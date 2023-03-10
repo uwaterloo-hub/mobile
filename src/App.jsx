@@ -2,10 +2,10 @@ import { NavigationContainer } from "@react-navigation/native";
 import React, { useState } from "react";
 import { MD3DarkTheme, Provider as PaperProvider } from "react-native-paper";
 
-import themes from "./config/themes/themes";
-import { toNavigationTheme } from "./config/utils";
-import { Config } from "./src/config";
-import MoreNavigator from "./src/navigators/MoreNavigator";
+import themes from "../config/themes/themes";
+import { toNavigationTheme } from "../config/utils";
+import { Config } from "./config";
+import MoreNavigator from "./navigators/MoreNavigator";
 
 
 function App() {
