@@ -11,7 +11,7 @@ import { icons, titles } from "./details/texts";
 function MoreScreen() {
 
     const config = useContext(Config);
-    const otherScreens = ["Categories", "Settings"]
+    const otherScreens = ["Categories", "Settings"];
 
     return (
         <Screen noMargin={true}>
